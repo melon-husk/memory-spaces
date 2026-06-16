@@ -123,6 +123,23 @@ npm run build
 }
 ```
 
+## Releasing
+
+1. Add your changes under `## [Unreleased]` in [`CHANGELOG.md`](CHANGELOG.md),
+   then rename it to the new version with today's date and add a compare link.
+2. Bump, tag, and push in one step (`preversion` builds, `postversion` pushes
+   the commit + tag):
+
+   ```bash
+   npm version patch   # or: minor | major
+   ```
+
+3. Publish to npm:
+
+   ```bash
+   npm publish
+   ```
+
 ## Roadmap
 
 - [ ] Semantic recall (embeddings) behind the same `MemoryStore` interface

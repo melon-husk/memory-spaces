@@ -13,7 +13,9 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags"
   },
   "license": "MIT",
   "keywords": [
