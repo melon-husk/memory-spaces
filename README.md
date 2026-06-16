@@ -77,24 +77,41 @@ Writes are atomic (temp file + rename). All storage sits behind the
 `MemoryStore` interface in [`src/store.ts`](src/store.ts), so swapping the JSON
 backend for SQLite or a vector store later is a single-file change.
 
-## Setup
+## Connecting a client
+
+Register the server in your MCP client config (e.g. Claude Desktop's
+`claude_desktop_config.json`). Drop `--enable-kb` if you don't want the
+knowledge base.
+
+**Via `npx`** (recommended — no install, always latest):
+
+```json
+{
+  "mcpServers": {
+    "memory-spaces": {
+      "command": "npx",
+      "args": ["-y", "memory-spaces", "--enable-kb"]
+    }
+  }
+}
+```
+
+You can also run straight from GitHub without publishing:
+`npx github:yourname/memory-spaces --enable-kb`.
+
+**From a local checkout** (for development):
 
 ```bash
 npm install
 npm run build
 ```
 
-## Connecting a client
-
-Register the server in your MCP client config. Example (Claude Desktop /
-`claude_desktop_config.json`):
-
 ```json
 {
   "mcpServers": {
     "memory-spaces": {
       "command": "node",
-      "args": ["/absolute/path/to/memory-spaces/dist/index.js"]
+      "args": ["/absolute/path/to/memory-spaces/dist/index.js", "--enable-kb"]
     }
   }
 }
