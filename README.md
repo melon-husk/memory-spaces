@@ -1,7 +1,13 @@
 # memory-spaces
 
+[![npm](https://img.shields.io/npm/v/memory-spaces.svg)](https://www.npmjs.com/package/memory-spaces)
+
 A unified, **space-separated memory** MCP server for desktop LLM apps (Cursor,
 Cline, Claude Desktop, Codex — anything that speaks [MCP](https://modelcontextprotocol.io)).
+
+> **Install:** published on npm as [`memory-spaces`](https://www.npmjs.com/package/memory-spaces).
+> No install step needed — point your MCP client at `npx -y memory-spaces`
+> (see [Connecting a client](#connecting-a-client)).
 
 Content is partitioned into **spaces** (e.g. `personal`, `work`). One space is
 active at a time; every content tool only ever touches the active space, so work
