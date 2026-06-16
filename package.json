@@ -23,6 +23,14 @@
     "knowledge-base",
     "llm"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melon-husk/memory-spaces.git"
+  },
+  "bugs": {
+    "url": "https://github.com/melon-husk/memory-spaces/issues"
+  },
+  "homepage": "https://github.com/melon-husk/memory-spaces#readme",
   "engines": {
     "node": ">=18"
   },
