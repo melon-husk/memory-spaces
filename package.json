@@ -1,6 +1,6 @@
 {
   "name": "memory-spaces",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A unified, space-separated memory MCP server for desktop LLM apps",
   "type": "module",
   "bin": {
